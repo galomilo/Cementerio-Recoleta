@@ -43,3 +43,43 @@ header h1{
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes showLeft {
+    from {
+        scale: 50%;
+        opacity: 0;
+        transform: translateX(-85%);
+    }
+
+    to {
+        scale: 100%;
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes showRight {
+    from {
+        scale: 50%;
+        opacity: 0;
+        transform: translateX(85%);
+    }
+
+    to {
+        scale: 100%;
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+.anim_photo{
+    view-timeline-name: --card;
+    view-timeline-axis: block;
+
+    animation-timeline: --card;
+    animation-name: showLeft;
+
+    animation-range: entry 25% cover 40%;
+    animation-fill-mode: both;
+    overflow-x: visible;
+}
