@@ -1,5 +1,6 @@
 body{
     margin: 0%;
+    overflow-x: hidden;
 }
 
 header{
@@ -33,6 +34,18 @@ header h1{
     box-shadow: 10px 10px 10px rgb(51, 51, 51);
 }
 
+#img_2{
+    width: 30%;
+    height: 30%;
+    rotate: 15deg;
+
+    box-shadow: 10px 10px 10px rgb(51, 51, 51);
+}
+
+section{
+    margin-top: 10vh;
+}
+
 #section_1{
     display: flex;
     justify-content: space-around;
@@ -43,6 +56,23 @@ header h1{
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+#section_2{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+
+#section_2 p{
+    width: 55vw;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
 
 @keyframes showLeft {
     from {
@@ -72,12 +102,24 @@ header h1{
     }
 }
 
-.anim_photo{
+.anim_photo_left{
     view-timeline-name: --card;
     view-timeline-axis: block;
 
     animation-timeline: --card;
     animation-name: showLeft;
+
+    animation-range: entry 25% cover 40%;
+    animation-fill-mode: both;
+    overflow-x: visible;
+}
+
+.anim_photo_right{
+    view-timeline-name: --card;
+    view-timeline-axis: block;
+
+    animation-timeline: --card;
+    animation-name: showRight;
 
     animation-range: entry 25% cover 40%;
     animation-fill-mode: both;
