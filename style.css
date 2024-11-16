@@ -195,6 +195,10 @@ footer h2{
 
 
 @media (max-width: 800px) {
+    h1{
+        text-align: center;
+    }
+
     #img_1{
         width: 100%;
         box-shadow: none;
